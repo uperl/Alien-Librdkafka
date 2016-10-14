@@ -16,6 +16,7 @@ my $builder = Alien::Base::ModuleBuild->new(
         exact_filename => 'https://github.com/edenhill/librdkafka/archive/0.9.1.tar.gz',
         exact_version => '0.9.1',
     },
+    alien_version_check => '%{pkg_config} --atleast-version 0.9.1 %n && %{pkg_config} --modversion %n'
 );
 
 $builder->create_build_script;
