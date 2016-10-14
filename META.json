@@ -27,7 +27,25 @@
          }
       }
    },
+   "provides" : {
+      "Alien::Librdkafka" : {
+         "file" : "lib/Alien/Librdkafka.pm",
+         "version" : "v0.9.1"
+      }
+   },
    "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/trinitum/perl-Alien-Librdkafka/issues"
+      },
+      "homepage" : "https://github.com/trinitum/perl-Alien-Librdkafka",
+      "repository" : {
+         "url" : "git://github.com/trinitum/perl-Alien-Librdkafka"
+      }
+   },
    "version" : "v0.9.1",
+   "x_contributors" : [
+      "Pavel Shaydo <zwon@cpan.org>"
+   ],
    "x_serialization_backend" : "JSON::PP version 2.27300"
 }

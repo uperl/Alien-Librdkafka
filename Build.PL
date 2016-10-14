@@ -16,7 +16,17 @@ my $builder = Alien::Base::ModuleBuild->new(
         exact_filename => 'https://github.com/edenhill/librdkafka/archive/0.9.1.tar.gz',
         exact_version => '0.9.1',
     },
-    alien_version_check => '%{pkg_config} --atleast-version 0.9.1 %n && %{pkg_config} --modversion %n'
+    alien_version_check => '%{pkg_config} --atleast-version 0.9.1 %n && %{pkg_config} --modversion %n',
+    meta_merge => {
+        resources => {
+            homepage   => 'https://github.com/trinitum/perl-Alien-Librdkafka',
+            bugtracker => 'https://github.com/trinitum/perl-Alien-Librdkafka/issues',
+            repository => 'git://github.com/trinitum/perl-Alien-Librdkafka',
+        },
+        x_contributors => [
+            'Pavel Shaydo <zwon@cpan.org>',
+        ],
+    },
 );
 
 $builder->create_build_script;
