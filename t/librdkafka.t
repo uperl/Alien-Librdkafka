@@ -20,6 +20,7 @@ subtest ffi => sub {
     ok(version->parse( $ver_func->() ) >=
       version->parse($Alien::Librdkafka::VERSION),
       "library version is at least $Alien::Librdkafka::VERSION");
+    diag "Version is ", $ver_func->();
 };
 
 done_testing;
