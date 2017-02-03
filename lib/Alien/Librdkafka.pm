@@ -22,7 +22,7 @@ L<https://github.com/edenhill/librdkafka>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (C) 2016 Pavel Shaydo
+Copyright (C) 2016, 2017 Pavel Shaydo
 
 This program is free software; you can redistribute it and/or modify it
 under the terms of either: the GNU General Public License as published
