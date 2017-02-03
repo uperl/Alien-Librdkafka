@@ -16,10 +16,10 @@ my $builder = Alien::Base::ModuleBuild->new(
     alien_name => 'rdkafka',
     alien_repository => {
         protocol => 'https',
-        exact_filename => 'https://github.com/edenhill/librdkafka/archive/0.9.1.tar.gz',
-        exact_version => '0.9.1',
+        exact_filename => 'https://github.com/edenhill/librdkafka/archive/v0.9.3.tar.gz',
+        exact_version => 'v0.9.3',
     },
-    alien_version_check => '%{pkg_config} --atleast-version 0.9.1 %n && %{pkg_config} --modversion %n',
+    alien_version_check => '%{pkg_config} --atleast-version 0.9.3 %n && %{pkg_config} --modversion %n',
     meta_merge => {
         resources => {
             homepage   => 'https://github.com/trinitum/perl-Alien-Librdkafka',
