@@ -6,6 +6,9 @@ my $builder = Alien::Base::ModuleBuild->new(
         'Alien::Base::ModuleBuild' => '0.005',
         'Module::Build' => '0.28',
     },
+    build_requires => {
+        'IO::Socket::SSL' => 0,
+    },
     requires => {
         'Alien::Base' => '0.005',
     },
