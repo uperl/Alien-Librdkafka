@@ -9,11 +9,19 @@ my $builder = Alien::Base::ModuleBuild->new(
     build_requires => {
         'IO::Socket::SSL' => 0,
     },
+    test_requires => {
+        'Test2::V0' => 0,
+    },
     requires => {
         'Alien::Base' => '0.005',
     },
     alien_autoconf_with_pic => 0,
     alien_name => 'rdkafka',
+    alien_build_commands => [
+      '%c --prefix=%s --enable-static',
+      'make',
+    ],
+    alien_isolate_dynamic => 1,
     alien_repository => {
         protocol => 'https',
         exact_filename => 'https://github.com/edenhill/librdkafka/archive/v0.11.6.tar.gz',

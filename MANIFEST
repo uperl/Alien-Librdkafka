@@ -1,9 +1,10 @@
-.travis.yml
 Build.PL
 Changes
 lib/Alien/Librdkafka.pm
+maint/cip-before-install
+maint/releaseprep
 MANIFEST			This list of files
 META.json
 META.yml
 README
-t/librdkafka.t
+t/alien_librdkafka.t
