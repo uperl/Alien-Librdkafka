@@ -1,22 +1,23 @@
 {
    "abstract" : "build and install librdkafka",
    "author" : [
-      "unknown"
+      "The current maintainer is Graham Ollis <plicease@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.422",
+   "generated_by" : "Module::Build version 0.4224",
    "license" : [
       "unknown"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
-      "version" : "2"
+      "version" : 2
    },
    "name" : "Alien-Librdkafka",
    "prereqs" : {
       "build" : {
          "requires" : {
-            "IO::Socket::SSL" : "0"
+            "IO::Socket::SSL" : "1.56",
+            "Net::SSLeay" : "1.49"
          }
       },
       "configure" : {
@@ -27,30 +28,34 @@
       },
       "runtime" : {
          "requires" : {
-            "Alien::Base" : "0.005",
-            "File::ShareDir" : "1.00"
+            "Alien::Base" : "0.005"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test2::V0" : "0"
          }
       }
    },
    "provides" : {
       "Alien::Librdkafka" : {
          "file" : "lib/Alien/Librdkafka.pm",
-         "version" : "v0.11.6"
+         "version" : "1.00"
       }
    },
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/trinitum/perl-Alien-Librdkafka/issues"
+         "web" : "https://github.com/plicease/Alien-Librdkafka/issues"
       },
-      "homepage" : "https://github.com/trinitum/perl-Alien-Librdkafka",
+      "homepage" : "https://github.com/plicease/Alien-Librdkafka",
       "repository" : {
-         "url" : "git://github.com/trinitum/perl-Alien-Librdkafka"
+         "url" : "git://github.com/plicease/Alien-Librdkafka"
       }
    },
-   "version" : "v0.11.6",
+   "version" : "1.00",
    "x_contributors" : [
       "Pavel Shaydo <zwon@cpan.org>"
    ],
-   "x_serialization_backend" : "JSON::PP version 2.27300_01"
+   "x_serialization_backend" : "JSON::PP version 4.00"
 }
