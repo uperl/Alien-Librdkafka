@@ -11,6 +11,11 @@ To install this module, run the following commands:
     ./Build test
     ./Build install
 
+SUPPORT
+
+Please note that this module is not actively developed and maintained, if you
+are interested in taking it over, please contact the author
+
 LICENSE AND COPYRIGHT
 
 Copyright (C) 2016, 2017, 2018 Pavel Shaydo
