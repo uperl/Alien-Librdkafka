@@ -1,12 +1,15 @@
-0.11.6 Tue Oct 23 2018 Pavel Shaydo <zwon@cpan.org>
-    - Upgrade to librdkafka v0.11.6
-    - Add a note about module not being maintained
+Revision history for Alien-Librdkafka
 
+  - New maintainer Graham Ollis <plicease@cpan.org>
+
+0.11.6 Tue Oct 23 2018 Pavel Shaydo <zwon@cpan.org>
+  - Upgrade to librdkafka v0.11.6
+  - Add a note about module not being maintained
 
 0.9.3 Fri Feb  3 2017 Pavel Shaydo <zwon@cpan.org>
-    - Add dependency on IO::Socket::SSL
-    - Upgrade to librdkafka v0.9.3
+  - Add dependency on IO::Socket::SSL
+  - Upgrade to librdkafka v0.9.3
 
 0.9.1 Fri Oct 14 2016 Pavel Shaydo <zwon@cpan.org>
-    - First version, released on an unsuspecting world.
+  - First version, released on an unsuspecting world.
 

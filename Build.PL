@@ -22,9 +22,9 @@ my $builder = Alien::Base::ModuleBuild->new(
     alien_version_check => '%{pkg_config} --atleast-version 0.11.6 %n && %{pkg_config} --modversion %n',
     meta_merge => {
         resources => {
-            homepage   => 'https://github.com/trinitum/perl-Alien-Librdkafka',
-            bugtracker => 'https://github.com/trinitum/perl-Alien-Librdkafka/issues',
-            repository => 'git://github.com/trinitum/perl-Alien-Librdkafka',
+            homepage   => 'https://github.com/plicease/Alien-Librdkafka',
+            bugtracker => 'https://github.com/plicease/Alien-Librdkafka/issues',
+            repository => 'git://github.com/plicease/Alien-Librdkafka',
         },
         x_contributors => [
             'Pavel Shaydo <zwon@cpan.org>',
