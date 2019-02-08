@@ -7,7 +7,7 @@ alien_ok 'Alien::Librdkafka';
 my $xs = do { local $/; <DATA> };
 xs_ok $xs, with_subtest {
   my $version = librdkafka::rd_kafka_version_str();
-  ok(version->parse($version) >= version->parse($Alien::Librdkafka::VERSION), "library version is at least $Alien::Librdkafka::VERSION");
+  ok(version->parse($version) >= version->parse('0.9.3'), "library version is at least 0.9.3");
   note "version = $version";
 };
 

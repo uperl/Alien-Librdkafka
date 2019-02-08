@@ -1,6 +1,8 @@
 Revision history for Alien-Librdkafka
 
   - New maintainer Graham Ollis <plicease@cpan.org>
+  - Lower version requirement to 0.9.3 which as needed by Kafka::Librd
+  - Alien version no longer tracks package version.
 
 0.11.6 Tue Oct 23 2018 Pavel Shaydo <zwon@cpan.org>
   - Upgrade to librdkafka v0.11.6

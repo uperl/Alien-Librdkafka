@@ -27,7 +27,7 @@ my $builder = Alien::Base::ModuleBuild->new(
         exact_filename => 'https://github.com/edenhill/librdkafka/archive/v0.11.6.tar.gz',
         exact_version => 'v0.11.6',
     },
-    alien_version_check => '%{pkg_config} --atleast-version 0.11.6 %n && %{pkg_config} --modversion %n',
+    alien_version_check => '%{pkg_config} --atleast-version 0.9.3 %n && %{pkg_config} --modversion %n',
     meta_merge => {
         resources => {
             homepage   => 'https://github.com/plicease/Alien-Librdkafka',
