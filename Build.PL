@@ -11,6 +11,7 @@ my $builder = Alien::Base::ModuleBuild->new(
     },
     requires => {
         'Alien::Base' => '1.52',
+        'parent'      => 0,
     },
     alien_autoconf_with_pic => 0,
     alien_name => 'rdkafka',

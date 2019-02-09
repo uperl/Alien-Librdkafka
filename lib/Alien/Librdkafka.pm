@@ -2,8 +2,8 @@ package Alien::Librdkafka;
  
 use strict;
 use warnings;
- 
 use parent 'Alien::Base';
+
 our $VERSION = '1.00';
 
 =head1 NAME
