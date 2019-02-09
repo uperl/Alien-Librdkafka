@@ -24,9 +24,10 @@ diag '';
 diag '';
 diag '';
 
-diag 'Alien::Librdkafka->version = ', Alien::Librdkafka->config('version');
-diag 'Alien::Librdkafka->cflags  = ', Alien::Librdkafka->cflags;
-diag 'Alien::Librdkafka->libs    = ', Alien::Librdkafka->libs;
+diag 'Alien::Librdkafka->version      = ', Alien::Librdkafka->config('version');
+diag 'Alien::Librdkafka->cflags       = ', Alien::Librdkafka->cflags;
+diag 'Alien::Librdkafka->libs         = ', Alien::Librdkafka->libs;
+diag 'Alien::Librdkafka->dynamic_libs = ', $_ for Alien::Librdkafka->dynamic_libs;
 
 diag '';
 diag '';
