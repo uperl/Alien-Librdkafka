@@ -1,5 +1,8 @@
 Revision history for Alien-Librdkafka
 
+  - Fixed old FFI test
+  - Dnyamic SSL prereqs required only for share install
+
 1.00 2019-02-08 18:41:50 -0500
   - New maintainer Graham Ollis <plicease@cpan.org>
   - Lower version requirement to 0.9.3 which as needed by Kafka::Librd
