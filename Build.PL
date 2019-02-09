@@ -3,17 +3,14 @@ use Alien::Base::ModuleBuild;
 my $builder = Alien::Base::ModuleBuild->new(
     module_name => 'Alien::Librdkafka',
     configure_requires => {
-        'Alien::Base::ModuleBuild' => '0.005',
+        'Alien::Base::ModuleBuild' => '0.032',
         'Module::Build' => '0.28',
-    },
-    build_requires => {
-        'IO::Socket::SSL' => 0,
     },
     test_requires => {
         'Test2::V0' => 0,
     },
     requires => {
-        'Alien::Base' => '0.005',
+        'Alien::Base' => '0.032',
     },
     alien_autoconf_with_pic => 0,
     alien_name => 'rdkafka',
