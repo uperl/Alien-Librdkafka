@@ -3,11 +3,20 @@ use Test::Alien;
 use Alien::Librdkafka;
 use version;
 
+my $min = '0.9.3';
+
 alien_ok 'Alien::Librdkafka';
 my $xs = do { local $/; <DATA> };
 xs_ok $xs, with_subtest {
   my $version = librdkafka::rd_kafka_version_str();
-  ok(version->parse($version) >= version->parse('0.9.3'), "library version is at least 0.9.3");
+  ok(version->parse($version) >= version->parse($min), "library version is at least $min");
+  note "version = $version";
+};
+
+ffi_ok with_subtest {
+  my($ffi) = @_;
+  my $version = $ffi->function( rd_kafka_version_str => [] => 'string' )->call;
+  ok(version->parse($version) >= version->parse($min), "library version is at least $min");
   note "version = $version";
 };
 
