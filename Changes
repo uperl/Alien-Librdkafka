@@ -1,5 +1,6 @@
 Revision history for Alien-Librdkafka
 
+1.01 2019-02-09 05:57:32 -0500
   - Fixed old FFI test
   - Dnyamic SSL prereqs required only for share install
 
