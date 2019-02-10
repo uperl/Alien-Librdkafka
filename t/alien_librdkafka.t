@@ -3,6 +3,18 @@ use Test::Alien;
 use Alien::Librdkafka;
 use version;
 
+diag '';
+diag '';
+diag '';
+
+diag 'Alien::Librdkafka->version      = ', Alien::Librdkafka->config('version');
+diag 'Alien::Librdkafka->cflags       = ', Alien::Librdkafka->cflags;
+diag 'Alien::Librdkafka->libs         = ', Alien::Librdkafka->libs;
+diag 'Alien::Librdkafka->dynamic_libs = ', $_ for Alien::Librdkafka->dynamic_libs;
+
+diag '';
+diag '';
+
 my $min = '0.9.3';
 
 alien_ok 'Alien::Librdkafka';
@@ -19,18 +31,6 @@ ffi_ok with_subtest {
   ok(version->parse($version) >= version->parse($min), "library version is at least $min");
   note "version = $version";
 };
-
-diag '';
-diag '';
-diag '';
-
-diag 'Alien::Librdkafka->version      = ', Alien::Librdkafka->config('version');
-diag 'Alien::Librdkafka->cflags       = ', Alien::Librdkafka->cflags;
-diag 'Alien::Librdkafka->libs         = ', Alien::Librdkafka->libs;
-diag 'Alien::Librdkafka->dynamic_libs = ', $_ for Alien::Librdkafka->dynamic_libs;
-
-diag '';
-diag '';
 
 done_testing;
 
