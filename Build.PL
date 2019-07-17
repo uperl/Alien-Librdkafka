@@ -22,7 +22,7 @@ my $builder = Alien::Base::ModuleBuild->new(
     alien_isolate_dynamic => 1,
     alien_repository => {
         protocol => 'https',
-        exact_filename => 'https://github.com/edenhill/librdkafka/archive/v1.1.0.zip',
+        exact_filename => 'https://github.com/edenhill/librdkafka/archive/v1.1.0.tar.gz',
         exact_version => 'v1.1.0',
     },
     alien_version_check => '%{pkg_config} --atleast-version 0.9.3 %n && %{pkg_config} --modversion %n',
