@@ -2,6 +2,7 @@ Build.PL
 Changes
 lib/Alien/Librdkafka.pm
 maint/cip-before-install
+maint/cip-test
 maint/releaseprep
 MANIFEST			This list of files
 META.json
