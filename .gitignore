@@ -6,3 +6,4 @@ _share/
 blib/
 /Alien-Librdkafka-*
 *.bak
+/_alien

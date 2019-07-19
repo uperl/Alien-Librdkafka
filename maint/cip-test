@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -ex
+
+perl Build.PL
+./Build
+./Build test verbose=1
+./Build install
+
+cpanm -v Kafka::Librd
