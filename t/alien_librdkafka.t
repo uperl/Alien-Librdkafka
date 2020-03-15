@@ -1,7 +1,7 @@
 use Test2::V0 -no_srand => 1;
 use Test::Alien;
 use Alien::Librdkafka;
-use version;
+use version 0.82;
 
 diag '';
 diag '';
