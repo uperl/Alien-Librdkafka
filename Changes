@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Add support for Visual C++ + vcpkg (gh#12)
 
 1.03_01   2020-03-15 03:05:21 -0600
   - Switched to alienfile + Alien::Build
