@@ -4,41 +4,38 @@ build and install librdkafka
 
 # SYNOPSIS
 
+In your Makefile.PL:
+
+```perl
+use ExtUtils::MakeMaker;
+use Alien::Base::Wrapper ();
+
+WriteMakefile(
+  Alien::Base::Wrapper->new('Alien::Librdkafka')->mm_args2(
+    # MakeMaker args
+    NAME => 'Kafka::Librd',
+    ...
+  ),
+);
+```
+
 In your Build.PL:
 
 ```perl
 use Module::Build;
-use Alien::Librdkafka;
+use Alien::Base::Wrapper qw( Alien::Librdkafka !export );
+
 my $builder = Module::Build->new(
   ...
   configure_requires => {
     'Alien::Librdkafka' => '0',
     ...
   },
-  extra_compiler_flags => Alien::Librdkafka->cflags,
-  extra_linker_flags   => Alien::Librdkafka->libs,
+  Alien::Base::Wrapper->mb_args,
   ...
 );
 
 $build->create_build_script;
-```
-
-In your Makefile.PL:
-
-```perl
-use ExtUtils::MakeMaker;
-use Config;
-use Alien::Librdkafka;
-
-WriteMakefile(
-  ...
-  CONFIGURE_REQUIRES => {
-    'Alien::Librdkafka' => '0',
-  },
-  CCFLAGS => Alien::Librdkafka->cflags . " $Config{ccflags}",
-  LIBS    => [ Alien::Librdkafka->libs ],
-  ...
-);
 ```
 
 # DESCRIPTION
