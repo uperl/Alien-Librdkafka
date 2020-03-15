@@ -1,5 +1,6 @@
 use alienfile;
 
+plugin 'Probe::Vcpkg' => 'librdkafka';
 plugin 'PkgConfig' => (
   pkg_name        => 'rdkafka',
   minimum_version => '0.9.3',
@@ -19,3 +20,11 @@ share {
   ];
   plugin 'Gather::IsolateDynamic';
 };
+
+if(meta->prop->{platform}->{compiler_type} eq 'microsoft')
+{
+  after gather => sub {
+    my($build) = shift;
+    $build->runtime_prop->{ffi_name} = 'rdkafka';
+  };
+}
