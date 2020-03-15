@@ -1,9 +1,2 @@
-Build
-MYMETA.json
-MYMETA.yml
-_build/
-_share/
-blib/
 /Alien-Librdkafka-*
-*.bak
-/_alien
+/.build

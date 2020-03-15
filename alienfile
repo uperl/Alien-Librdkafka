@@ -1,0 +1,21 @@
+use alienfile;
+
+plugin 'PkgConfig' => (
+  pkg_name        => 'rdkafka',
+  minimum_version => '0.9.3',
+);
+
+share {
+  start_url 'https://github.com/edenhill/librdkafka/archive/v1.1.0.tar.gz';
+  plugin 'Download';
+  plugin 'Extract' => 'tar.gz';
+  plugin 'Build::Autoconf' => (
+    with_pic => 0,
+  );
+  build [
+    '%{configure}',
+    '%{make}',
+    '%{make} install',
+  ];
+  plugin 'Gather::IsolateDynamic';
+};
