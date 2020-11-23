@@ -1,4 +1,4 @@
-# Alien::Librdkafka [![Build Status](https://secure.travis-ci.org/plicease/Alien-Librdkafka.png)](http://travis-ci.org/plicease/Alien-Librdkafka)
+# Alien::Librdkafka [![Build Status](https://api.travis-ci.com/plicease/Alien-Librdkafka.svg?branch=master)](https://travis-ci.com/github/plicease/Alien-Librdkafka)
 
 build and install librdkafka
 
@@ -13,7 +13,7 @@ use Alien::Base::Wrapper ();
 WriteMakefile(
   Alien::Base::Wrapper->new('Alien::Librdkafka')->mm_args2(
     # MakeMaker args
-    NAME => 'Kafka::Librd',
+    NAME => 'My::XS',
     ...
   ),
 );
