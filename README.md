@@ -1,4 +1,4 @@
-# Alien::Librdkafka [![Build Status](https://api.travis-ci.com/plicease/Alien-Librdkafka.svg?branch=master)](https://travis-ci.com/github/plicease/Alien-Librdkafka)
+# Alien::Librdkafka ![linux](https://github.com/uperl/Alien-Librdkafka/workflows/linux/badge.svg)
 
 build and install librdkafka
 
