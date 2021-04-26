@@ -1,4 +1,4 @@
-# Alien::Librdkafka ![linux](https://github.com/uperl/Alien-Librdkafka/workflows/linux/badge.svg)
+# Alien::Librdkafka ![linux](https://github.com/uperl/Alien-Librdkafka/workflows/linux/badge.svg) ![macos](https://github.com/uperl/Alien-Librdkafka/workflows/macos/badge.svg)
 
 build and install librdkafka
 
