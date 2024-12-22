@@ -1,2 +1,4 @@
 /Alien-Librdkafka-*
 /.build
+*.old
+*.orig
